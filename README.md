@@ -120,6 +120,3 @@ Task Manager/
 | PUT | `/api/tasks/reorder` | Reorder tasks |
 | DELETE | `/api/tasks/:id` | Delete task |
 
-## 📝 License
-
-MIT
