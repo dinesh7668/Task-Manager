@@ -1,0 +1,286 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ===== Custom Design System — Crimson Dark Theme ===== */
+
+@theme {
+  /* Primary — Crimson Red */
+  --color-primary-50: #fef2f2;
+  --color-primary-100: #fee2e2;
+  --color-primary-200: #fecaca;
+  --color-primary-300: #fca5a5;
+  --color-primary-400: #f87171;
+  --color-primary-500: #ef4444;
+  --color-primary-600: #dc2626;
+  --color-primary-700: #b91c1c;
+  --color-primary-800: #991b1b;
+  --color-primary-900: #7f1d1d;
+
+  /* Accent — Warm Rose / Coral */
+  --color-accent-400: #fb7185;
+  --color-accent-500: #f43f5e;
+  --color-accent-600: #e11d48;
+
+  /* Status colors */
+  --color-success-400: #4ade80;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+
+  --color-danger-400: #f87171;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+
+  /* Neutral scale — very dark for light mode */
+  --color-dark-50: #fafafa;
+  --color-dark-100: #e5e5e5;
+  --color-dark-200: #404040;
+  --color-dark-300: #525252;
+  --color-dark-400: #a3a3a3;
+  --color-dark-500: #737373;
+  --color-dark-600: #525252;
+  --color-dark-700: #262626;
+  --color-dark-800: #171717;
+  --color-dark-900: #0a0a0a;
+  --color-dark-950: #050505;
+}
+
+/* ===== Global Styles ===== */
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Light mode = Premium dark crimson theme */
+  body {
+    background-color: #080808;
+    color: #e5e5e5;
+    color-scheme: dark;
+  }
+
+  /* Dark mode = Slightly lighter dark slate */
+  body.dark {
+    background-color: #040408;
+    color: #d4d4d8;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(239, 68, 68, 0.3);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(239, 68, 68, 0.5);
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgba(100, 116, 139, 0.4);
+  }
+}
+
+/* ===== Utility Classes ===== */
+
+@layer utilities {
+  /* Light mode glass — dark glass */
+  .glass {
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(239, 68, 68, 0.08);
+  }
+  .dark .glass {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  /* Light mode glass-card — dark glass with subtle crimson border glow */
+  .glass-card {
+    background: rgba(17, 17, 17, 0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(239, 68, 68, 0.1);
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.03), 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  .dark .glass-card {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Crimson gradient for buttons */
+  .gradient-primary {
+    background: linear-gradient(135deg, #dc2626, #991b1b);
+    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
+  }
+
+  /* Crimson text gradient */
+  .gradient-text {
+    background: linear-gradient(135deg, #ef4444, #f87171);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+  .animate-slide-in-right {
+    animation: slideInRight 0.3s ease-out;
+  }
+}
+
+/* ===== Skeleton Loading ===== */
+
+@layer components {
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      rgba(30, 30, 30, 0.8) 25%,
+      rgba(50, 50, 50, 0.6) 50%,
+      rgba(30, 30, 30, 0.8) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 8px;
+  }
+  .dark .skeleton {
+    background: linear-gradient(
+      90deg,
+      rgba(30, 41, 59, 0.8) 25%,
+      rgba(51, 65, 85, 0.6) 50%,
+      rgba(30, 41, 59, 0.8) 75%
+    );
+    background-size: 200% 100%;
+  }
+}
+
+/* ===== Animated Background ===== */
+
+.animated-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Main crimson glow orb */
+.animated-bg::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.12) 0%, rgba(220, 38, 38, 0.04) 40%, transparent 70%);
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+/* Secondary smaller glow */
+.animated-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.08) 0%, transparent 60%);
+  animation: floatGlow 12s ease-in-out infinite;
+}
+
+/* Floating particle styles */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.particle-line {
+  position: absolute;
+  width: 1px;
+  transform-origin: top;
+  pointer-events: none;
+}
+
+/* Grid overlay */
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(239, 68, 68, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(239, 68, 68, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 20%, transparent 80%);
+}
+
+/* ===== Animations ===== */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.15); }
+}
+
+@keyframes floatGlow {
+  0%, 100% { opacity: 0.4; transform: translateY(0) scale(1); }
+  50% { opacity: 0.7; transform: translateY(-30px) scale(1.1); }
+}
+
+@keyframes floatParticle {
+  0% { opacity: 0; transform: translateY(100vh) scale(0); }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-20vh) scale(1); }
+}
+
+@keyframes streakDown {
+  0% { opacity: 0; transform: scaleY(0); }
+  20% { opacity: 1; }
+  100% { opacity: 0; transform: scaleY(1); }
+}
+
+/* ===== Toast Overrides for dark theme ===== */
+.toast-custom {
+  font-family: 'Inter', system-ui, sans-serif !important;
+}
