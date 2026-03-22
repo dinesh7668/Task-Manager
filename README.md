@@ -109,14 +109,5 @@ Task Manager/
 | POST | `/api/auth/login` | Login user |
 | GET | `/api/auth/me` | Get current user |
 
-### Tasks
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/tasks` | Get all tasks (with filters) |
-| GET | `/api/tasks/stats` | Get task statistics |
-| GET | `/api/tasks/:id` | Get single task |
-| POST | `/api/tasks` | Create new task |
-| PUT | `/api/tasks/:id` | Update task |
-| PUT | `/api/tasks/reorder` | Reorder tasks |
 | DELETE | `/api/tasks/:id` | Delete task |
 
