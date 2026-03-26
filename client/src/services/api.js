@@ -5,7 +5,7 @@ import axios from 'axios';
  * Configured with base URL and auth token interceptor
  */
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL || '/api',
   headers: {
     'Content-Type': 'application/json'
   }
