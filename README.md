@@ -30,52 +30,6 @@ A full-stack task management application built with React, Node.js, Express, and
 | Database | MongoDB, Mongoose |
 | Auth | JWT (jsonwebtoken, bcryptjs) |
 
-##  Getting Started
-
-### Prerequisites
-- Node.js 18+
-- MongoDB (local or Atlas)
-
-### 1. Clone and install
-
-```bash
-# Install backend dependencies
-cd server
-npm install
-
-# Install frontend dependencies
-cd ../client
-npm install
-```
-
-### 2. Configure environment
-
-Create a `.env` file in the `server/` directory:
-
-```env
-MONGO_URI=mongodb://localhost:27017/taskmanager
-JWT_SECRET=your_jwt_secret_key_here
-PORT=5000
-CLIENT_URL=http://localhost:5173
-```
-
-### 3. Start MongoDB
-
-Make sure MongoDB is running on your local machine, or update `MONGO_URI` with your MongoDB Atlas connection string.
-
-### 4. Run the application
-
-```bash
-# Terminal 1 - Start backend
-cd server
-npm run dev
-
-# Terminal 2 - Start frontend
-cd client
-npm run dev
-```
-
-The app will be available at **http://localhost:5173**
 
 ##  Project Structure
 
