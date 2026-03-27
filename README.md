@@ -2,7 +2,7 @@
 
 A full-stack task management application built with React, Node.js, Express, and MongoDB.
 
-## ✨ Features
+##  Features
 
 - **Task Management**: Create, edit, delete, and reorder tasks
 - **Priority System**: High, Medium, Low priority with color indicators
@@ -17,7 +17,7 @@ A full-stack task management application built with React, Node.js, Express, and
 - **Loading Skeletons**: Smooth loading states
 - **Animations**: Framer Motion powered transitions
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -30,7 +30,7 @@ A full-stack task management application built with React, Node.js, Express, and
 | Database | MongoDB, Mongoose |
 | Auth | JWT (jsonwebtoken, bcryptjs) |
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Node.js 18+
@@ -77,7 +77,7 @@ npm run dev
 
 The app will be available at **http://localhost:5173**
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Task Manager/
@@ -100,7 +100,7 @@ Task Manager/
 └── README.md
 ```
 
-## 🔌 API Endpoints
+##  API Endpoints
 
 ### Authentication
 | Method | Endpoint | Description |
@@ -110,4 +110,6 @@ Task Manager/
 | GET | `/api/auth/me` | Get current user |
 
 | DELETE | `/api/tasks/:id` | Delete task |
+
+
 
