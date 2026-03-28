@@ -63,7 +63,7 @@ Task Manager/
 | POST | `/api/auth/login` | Login user |
 | GET | `/api/auth/me` | Get current user |
 
-| DELETE | `/api/tasks/:id` | Delete task |
+| DELETE | API Calling|
 
 
 
