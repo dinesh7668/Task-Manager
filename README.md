@@ -56,6 +56,15 @@ Task Manager/
 
 ##  API Endpoints
 
+### Authentication
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/auth/register` | Register new user |
+| POST | `/api/auth/login` | Login user |
+| GET | `/api/auth/me` | Get current user |
+
+| DELETE | API Calling|
+
 
 
 
