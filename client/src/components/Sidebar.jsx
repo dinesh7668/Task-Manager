@@ -44,9 +44,9 @@ export default function Sidebar() {
         </div>
         <div>
           <h1 className="text-lg font-bold bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent">
-            TaskFlow
+            Taskify
           </h1>
-          <p className="text-xs text-dark-400">Task Manager</p>
+          <p className="text-xs text-dark-400">Taskify</p>
         </div>
       </div>
 
