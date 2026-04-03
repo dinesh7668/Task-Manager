@@ -4,6 +4,10 @@ import { HiOutlineX, HiOutlinePlus } from 'react-icons/hi';
 
 const categories = ['work', 'personal', 'study', 'health', 'finance', 'other'];
 const priorities = ['low', 'medium', 'high'];
+const selectOptionStyle = {
+  backgroundColor: '#111827',
+  color: '#f5f5f5'
+};
 
 /**
  * TaskModal - Create/Edit task modal form
@@ -175,7 +179,9 @@ export default function TaskModal({ isOpen, onClose, onSubmit, task = null }) {
                       focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500 text-sm"
                   >
                     {priorities.map(p => (
-                      <option key={p} value={p}>{p.charAt(0).toUpperCase() + p.slice(1)}</option>
+                      <option key={p} value={p} style={selectOptionStyle}>
+                        {p.charAt(0).toUpperCase() + p.slice(1)}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -189,7 +195,9 @@ export default function TaskModal({ isOpen, onClose, onSubmit, task = null }) {
                       focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500 text-sm"
                   >
                     {categories.map(c => (
-                      <option key={c} value={c}>{c.charAt(0).toUpperCase() + c.slice(1)}</option>
+                      <option key={c} value={c} style={selectOptionStyle}>
+                        {c.charAt(0).toUpperCase() + c.slice(1)}
+                      </option>
                     ))}
                   </select>
                 </div>
