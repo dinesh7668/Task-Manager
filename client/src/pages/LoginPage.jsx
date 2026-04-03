@@ -79,7 +79,7 @@ export default function LoginPage() {
               <HiOutlineCheckCircle className="text-white text-2xl" />
             </div>
           </div>
-          <h1 className="text-3xl font-bold gradient-text">TaskFlow</h1>
+          <h1 className="text-3xl font-bold gradient-text">Taskify</h1>
           <p className="text-neutral-500 mt-2 text-sm">Sign in to manage your tasks</p>
         </div>
 
